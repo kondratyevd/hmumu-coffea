@@ -189,9 +189,9 @@ def postprocess(args, parallelize=True):
         for s in args['samples']:
             variations = args['syst_variations']
             for v in variations:
-                proc_outs = glob.glob(f"{path}/{year}_{args['label']}/{v}/{s}.coffea")
+                proc_outs = glob.glob(f"{path}/{year}_{args['label']}/{v}/{s}*coffea")
                 if len(proc_outs) == 0:
-                    proc_outs = glob.glob(f"{path}/{year}_{args['label']}/nominal/{s}.coffea")
+                    proc_outs = glob.glob(f"{path}/{year}_{args['label']}/nominal/{s}*coffea")
                 for proc_path in proc_outs:
                     for c in args['channels']:
                         for r in args['regions']:
@@ -273,7 +273,6 @@ def to_pandas(args):
             if (grouping[s]!='VBF') and ('THU' in var): continue
         else:
             if ('THU' in var): continue
-        
         
         done = False
         for syst, decorr in decorrelation_scheme.items():
@@ -1475,7 +1474,7 @@ def plot(var, hists, edges, args, r='', save=True, blind=True, show=False, plots
 
     for v in hist.v.unique():
         for w in hist.w.unique():
-#            continue
+            continue
             if ('nominal' not in v) and ('nominal' not in w): continue
             if ('nominal' in v) and ('nominal' in w): continue
             if ('off' in w): continue

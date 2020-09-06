@@ -172,7 +172,7 @@ to_plot_ = [
     'nsoftjets5','htsoft2'
     ]
 to_plot = []
-#to_plot = ['rpt','jet1_eta','jet2_eta']
+to_plot = ['dimuon_mass']
 vars_to_save = []
 
 if args.plot:
@@ -198,7 +198,7 @@ for model in models:
 
 samples_ = [
     'dy_m105_160_amc',
-    'dy_m105_160_vbf_amc',
+#    'dy_m105_160_vbf_amc',
 #    'ewk_lljj_mll105_160_ptj0',
 #    'vbf_powhegPS',
 ]
@@ -338,8 +338,10 @@ postproc_args = {
     'out_path': 'plots_new/',
     'samples':samples,
     'training_samples': training_samples,
-    'channels': ['vbf','vbf_01j','vbf_2j'],
-    'channel_groups': {'vbf':['vbf','vbf_01j','vbf_2j']},
+    'channels': ['ggh','ggh_01j','ggh_2j'],
+    'channel_groups': {'ggh':['ggh_01j','ggh_2j']},
+#    'channels': ['vbf','vbf_01j','vbf_2j'],
+#    'channel_groups': {'vbf':['vbf','vbf_01j','vbf_2j']},
     'regions': ['h-peak', 'h-sidebands'],
     'vars_to_plot': list(vars_to_plot.values()),
     'wgt_variations': True,
