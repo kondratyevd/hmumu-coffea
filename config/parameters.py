@@ -169,7 +169,8 @@ parameters["dnn_max"] = {
 event_branches = ['run', 'event', 'luminosityBlock', 'genWeight']
 muon_branches = ['nMuon', 'Muon_pt', 'Muon_ptErr', 'Muon_eta',
                  'Muon_phi', 'Muon_mass', 'Muon_charge',
-                 'Muon_pfRelIso04_all', 'Muon_dxybs',
+                 'Muon_pfRelIso04_all',
+                 # 'Muon_dxybs',
                  'Muon_fsrPhotonIdx', 'Muon_mediumId', 'Muon_genPartIdx',
                  'Muon_nTrackerLayers']
 fsr_branches = ['nFsrPhoton', 'FsrPhoton_pt', 'FsrPhoton_eta',
@@ -196,7 +197,8 @@ ele_branches = ['nElectron', 'Electron_pt', 'Electron_eta',
                 'Electron_mvaFall17V2Iso_WP90']
 other_branches = ['MET_pt', 'HTXS_stage1_1_fine_cat_pTjet30GeV',
                   'fixedGridRhoFastjetAll', 'nLHEScaleWeight',
-                  'nLHEPdfWeight', 'LHEPdfWeight']
+                  'nLHEPdfWeight', 'LHEPdfWeight', 'HTXS_Higgs_pt',
+                  'HTXS_njets30']
 event_flags = ['Flag_BadPFMuonFilter',
                'Flag_EcalDeadCellTriggerPrimitiveFilter',
                'Flag_HBHENoiseFilter', 'Flag_HBHENoiseIsoFilter',

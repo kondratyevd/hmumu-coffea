@@ -9,13 +9,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  test_run:
+  validation_latest:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest]
         python-version: [3.7]
-    name: test - python ${{ matrix.python-version }}
+    name: coffea latest
 
     steps:
       - uses: actions/checkout@master
