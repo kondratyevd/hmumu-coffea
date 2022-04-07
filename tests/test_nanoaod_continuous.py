@@ -94,6 +94,6 @@ if __name__ == "__main__":
         "val_sumw2": "value",
         "dimuon_mass": slice(None),
     }
-    print(out_hist["hist"][0][slicer].sum())
+
     assert almost_equal(out_hist["hist"][0][slicer].sum(), 31778.21631, precision=0.01)
     assert almost_equal(sum(out_plot), 31778.21631, precision=0.01)

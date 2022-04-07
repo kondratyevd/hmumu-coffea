@@ -18,8 +18,8 @@ __all__ = ["dask"]
 
 parameters = {
     "ncpus": 1,
-    "years": [2018],
-    "datasets": ["dy_m105_160_vbf_amc"],
+    "years": [2016],
+    "datasets": ["dy_m105_160_amc"],
     "channels": ["vbf"],
     "regions": ["h-peak"],
     "syst_variations": ["nominal"],
@@ -33,7 +33,7 @@ parameters = {
     "14TeV_label": False,
     "has_variations": True,
     "variables_lookup": variables_lookup,
-    "grouping": {"dy_m105_160_vbf_amc": "DY"},
+    "grouping": {"dy_m105_160_amc": "DY"},
     "plot_groups": {"stack": "DY", "step": [], "errorbar": []},
 }
 
@@ -62,6 +62,6 @@ if __name__ == "__main__":
         "val_sumw2": "value",
         "dimuon_mass": slice(None),
     }
-    print(out_hist["hist"][0][slicer].sum())
+
     assert almost_equal(out_hist["hist"][0][slicer].sum(), 0.14842246076249055)
     assert almost_equal(sum(out_plot), 0.14842246076249055)
