@@ -5,6 +5,10 @@
 ![Nanoaod](https://github.com/kondratyevd/hmumu-coffea/actions/workflows/nanoaod.yml/badge.svg)
 ![Delphes](https://github.com/kondratyevd/hmumu-coffea/actions/workflows/delphes.yml/badge.svg)
 
+⚠️⚠️⚠️ The framework development moved to a new repository: [Run3HmmAnalysis/copperhead](https://github.com/Run3HmmAnalysis/copperhead) ⚠️⚠️⚠️
+
+---
+
 The framework was originally designed for the [search for the Higgs boson decays into two muons](https://inspirehep.net/literature/1815813) with the CMS detector at the Large Hadron Collider. The published results in the channel targeting the VBF Higgs production mode were reproduced with 1% precision.
 
 Currently the framework is under development to integrate both of the main Higgs production modes (ggH and VBF), and predict the sensitivity of the CMS H→µµ analysis in LHC Run 3 and at HL-LHC.
